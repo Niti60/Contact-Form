@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Contact form</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+</head>
+<body>
+  
+<div class="successDiv">
+  <div class="sent">
+  <span><img src="assets/images/icon-success-check.svg"></span><p class="msg">Message Sent!</p>
+</div>
+<p class="touch">Thanks for completing the form. We'll be in touch soon!</p>
+</div>
+<form id="myForm" action="">
+  <h1>Contact Us</h1>
+  <div class="Name-Form">
+
+    <div class="Names">
+  <label for="FName">First Name *</label>
+  <input id="FName" type="text">
+  <span class="errfname"></span>
+</div>
+
+<div class="Names">
+  <label for="LName">Last Name *</label>
+  <input type="text" id="LName">
+  <span class="errLname"></span>
+</div>
+
+</div>
+<div class="emaildiv">
+  <label for="EmailAddress">Email Address *</label>
+  <input id="EmailAddress" type="email">
+  <span class="errmail"></span>
+</div>
+<legend>Query Type*</legend>
+<div class="radiosdiv">
+  <div class="radio">
+    <input id="GeneralRadio" class="radioinputs" type="radio" value="General Enquiry" name="requestType">
+    <span class="CustomRadio"><img src="assets/images/icon-radio-selected.svg"></span>
+ <label for="GeneralRadio">General Enquiry</label>
+  </div>
+
+  <div class="radio">
+    <input id="SupportRadio" class="radioinputs" type="radio" value="Support Request" name="requestType">
+    <span class="CustomRadio"><img src="assets/images/icon-radio-selected.svg"></span>
+ <label for="SupportRadio">Support Request</label>
+  </div>
+</div>
+<span class="radioerr"></span>
+
+<div class="messageDiv">
+  <label for="msginput">Message*</label>
+ <textarea name="" id="msginput"></textarea>
+</div>
+<span class="errmsg"></span>
+<div class="consentbox">
+  <input type="checkbox" id="consentcheck">
+  <span id="CustomCheckbox"><img src="assets/images/icon-checkbox-check.svg"></span>
+  <label for="consentcheck">I consent to being contacted by the team</label>
+</div>
+
+<span class="errconsent"></span>
+
+
+  <button class="btn" type="submit" onclick="formSubmition()">Submit</button>
+</form>
+<script src="script.js"></script>
+</body>
+</html>

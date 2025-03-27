@@ -1,0 +1,305 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Karla", sans-serif;
+}
+body{
+ background-color:   hsl(148, 38%, 91%);
+    height: 100%;
+    width: 100%;
+}
+.attribution { 
+font-size: 11px; text-align: center;
+}
+
+.attribution a {
+color: hsl(228, 45%, 44%);
+}
+.successDiv{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-left: auto;
+    width: max-content;
+    margin-top: 20px;
+    border-radius: 12px;
+    margin-right: auto;
+    background-color:  hsl(187, 24%, 22%);
+    color: white;
+    opacity: 0;
+}
+.active{
+  opacity: 1;
+  animation: successlogin .5s ease-in-out  1 forwards;
+}
+
+@keyframes successlogin {
+  0% {
+    top: -15%;
+  }
+  100% {
+    top: 2%;
+  }
+    
+}
+.sent{
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.sent p {
+    font-weight: 700;
+}
+.touch{
+    font-weight: 100;
+}
+form{
+    background-color: white;
+    padding: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    width: fit-content;
+    border-radius: 12px;
+}
+form h1{
+    color:  hsl(187, 24%, 22%);
+    margin-bottom: 20px;
+}
+.Name-Form{
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+.emaildiv{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    
+}
+.Names{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 16rem;
+}
+textarea{
+    height: 40px;
+    width: 100%;
+    border-radius: 8px;
+    padding-left: 5px;
+    padding-top: 10px;
+    resize: none;
+    font-size: 16px;
+    border: 1px solid  hsl(186, 15%, 59%);
+    transition: .4s ease-in-out;
+&:focus{
+    outline: none;
+}
+&:hover{
+border: 1px solid hsl(169, 82%, 27%);
+}
+}
+span{
+    font-size: 12px;
+}
+.errconsent{
+    margin-bottom: 10px;
+}
+input{
+    height: 35px;
+    width: 100%;
+    border-radius: 8px;
+    padding-left: 5px;
+    font-size: 16px;
+    border: 1px solid  hsl(186, 15%, 59%);
+    transition: .4s ease-in-out;
+&:focus{
+    outline: none;
+}
+&:hover{
+border: 1px solid hsl(169, 82%, 27%);
+}
+}
+#RadioInput{
+    font-size: 14px;
+    height: 20px;
+    width: fit-content;
+}
+legend{
+    margin: 10px 0px;
+}
+.radio{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid  hsl(186, 15%, 59%);
+    border-radius: 8px;
+    padding: 0px 20px;
+    width: 16rem;
+    font-size: 16px;
+    margin: 10px 0px;
+    &:hover{
+        border: 1px solid hsl(169, 82%, 27%);
+}
+}
+.radio input{
+    width: 18px;
+}
+.radio input:checked{
+    opacity: 0.1;
+}
+.radiosdiv{
+display: flex;
+justify-content: space-between;
+}
+.messageDiv textarea{
+    height: 100px;
+    padding: 0px 10px;
+    margin-top: 10px;
+}
+.consentbox{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 15px 0px;
+}
+#consentcheck{
+height: 18px;
+width: 20px;
+}
+#CustomCheckbox {
+    opacity: 0;
+    width: 20px;
+    height: 18px;
+    position: absolute;
+}
+
+#consentcheck:checked + #CustomCheckbox {
+    opacity: 1;
+}
+.CustomRadio{
+position: absolute;
+opacity: 0;
+}
+.radio input:checked + .CustomRadio{
+    opacity: 1;
+}
+.btn{
+    background-color:  hsl(169, 82%, 27%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: .4s ease-in-out;
+    width: 100%;
+    margin-top: 10px;
+&:hover{
+    background-color: hsl(170, 100%, 16%);
+}
+}
+/* Media Querires */
+@media (max-width: 800px){
+    form{
+        margin-top: 1px;
+        padding: 10px 50px;
+        width: 90%;
+    }
+    *{
+        gap: 2px;
+    }
+    .Names{
+        width: 100%;
+    }
+    .Name-Form{
+        flex-direction: column;
+        gap: 10px;
+    }
+    .radio{
+        width: 100%;
+    }
+    .radiosdiv{
+        flex-direction: column;
+        gap: 10px;
+    }
+    .messageDiv textarea{
+        width: 100%;
+    }
+    .btn{
+        width: 100%;
+    }
+}
+@media(max-width: 500px){
+    input{
+        margin: 0px;
+    }
+    form{
+        padding: 10px;
+        margin-top: 5px;
+    }
+    h1{
+        font-size: 18px;
+    }
+    .btn{
+        padding: 4px;
+        font-size: 13px;
+    }
+    .messageDiv textarea{
+        margin: 1px 0px;
+    }
+    label{
+        font-size: 12px;
+        margin: 0px;
+    }
+    .radio{
+        padding: 0px 10px;
+    }
+    .btn{
+        font-size: 16px;
+    }
+    .messageDiv textarea{
+        padding: 0px 5px;
+    }
+    legend{
+        font-size: 14px;
+        margin: 0px;
+    }
+    .Names{
+        gap: 0px;
+    }
+    .emaildiv{
+        gap: 0px;
+    }
+    .Name-Form{
+        flex-direction: column;
+        gap: 6px;
+        margin-bottom: 8px;
+    }
+    .radio{
+        width: 100%;
+        margin: 0px;
+    }
+    .radiosdiv{
+        flex-direction: column;
+        gap: 2px;
+    }
+    .messageDiv textarea{
+        width: 100%;
+    }
+    .btn{
+        width: 100%;
+    }
+    .successDiv{
+        font-size: 10px;
+    }
+    #EmailAddress{
+        width: 100%;
+    }
+}
